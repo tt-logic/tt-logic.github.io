@@ -1,0 +1,125 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function(){
+  $('a[href^="#"]').click(function(){
+    var speed = 500;
+    var href= $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    $("html, body").animate({scrollTop:position}, speed, "swing");
+    return false;
+  });
+});
+</script>
+<title>高木翼のWebサイト</title>
+<link rel="stylesheet" href="index.css" type="text/css" />
+</head>
+
+<body>
+<header>
+<h1>高木翼のWebサイト</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="#H1">経歴</a></li>
+        <li><a href="#H2">研究内容</a></li>
+        <li><a href="#H3">主な業績</a></li>
+    </ul>
+</nav>
+<main>
+<div class="profile-card">
+    <div class="profile-card__inner">
+        <div class="profile-thumb">
+            <img src="portrait.jpg">
+        </div>
+        <div class="profile-content">
+            <span class="profile-name">高木&emsp;翼</span>
+            <span class="profile-ename">Tsubasa TAKAGI</span>
+            <span>数理論理学を計算機科学に応用する研究をしています。</span>
+        </div>
+    </div>
+</div>
+<table class="profile">
+    <tbody>
+        <tr>
+            <th>所属</th>
+            <td>JAIST（<a href="http://www.jaist.ac.jp/is/labs/tojo-lab/doku.php?id=start">東条研究室</a>）</td>
+        </tr>
+        <tr>
+            <th>連絡先</th>
+            <td><script type="text/javascript">
+                    var ma = String.fromCharCode(137-21,106+9,138-21,69+29,104-7,99+16,127-30,57+7,108-2,89+8,115-10,90+25,119-3,37+9,123-26,81+18,73-27,81+25,124-12);
+                    var mt = String.fromCharCode(113-4,97+0,112-7,102+6,142-26,65+46,78-20);
+                    document.write('<a href="'+ mt + ma + '">' + ma + '</a>');
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <th>専門分野</th>
+            <td>数理論理学</td>
+        </tr>
+</table>
+<h2 class="headline" id="H1">経歴</h2>
+<ul>
+    <li>法政大学文学部哲学科（2017年4月～2020年3月）</li>
+    <li>JAIST情報科学系（2020年4月～現在）</li>
+</ul>
+<b>TA（ティーチング・アシスタント）</b>
+<ul>
+    <li>Mathematical Logic（JAIST、2021年度）</li>
+    <li>基礎情報数学（JAIST、2021年度）</li>
+</ul>
+<h2 class="headline" id="H2">研究内容</h2>
+<p>現在の研究テーマは以下のとおりです。</p>
+<h3 class="sub-headline">論理計算の量子計算的意味論の構築</h3>
+<p>従来の量子論理の意味論（Hilbert空間の閉部分空間がなす束による代数的意味論）は量子力学の基礎付けを目的として誕生したため、計算的意味が与えられていませんでした。そこで、Kripke意味論を用いて量子測定や量子ゲートによる状態遷移を論理体系のモデルに組み込むことで、論理計算の量子計算的意味付けを行います。</p>
+<div class="box">
+    <div class="box-title">背景</div>
+    <p>量子論理とは、Birkhoffとvon Neumannによって、1936年に提案された量子力学の論理です<sup><a href="#b1">[1]</a></sup>。量子論理の一つの重要な目的は、実験によって真偽を決定できる基本的な命題（観測命題）から量子力学全体を再構築することにありました。1936年以来の伝統では、量子論理とは、Hilbert空間の閉部分空間全体がなす束（もしくは閉部分空間への射影がなす束）だとされてきました。</p>
+    <p>しかし、直観主義論理がG&ouml;del–McKinsey–Tarski翻訳によって様相論理体系S4に埋め込み可能であるのと同様の意味で、ある種の量子論理（Orthologic）は様相論理体系Bに埋め込み可能であるということが、1974年にGoldblattによって示されました<sup><a href="#b2">[2]</a></sup>。それ以来、量子論理を埋め込む先の様相論理を調べるという研究が活発になりました。</p>
+</div>
+<div class="box"><div class="box-title">研究成果</div>
+    <p>Goldblatt翻訳によって量子論理を埋め込む先の様相論理のKripke意味論によれば、到達可能関係が純粋状態間の非直交関係として定義されています<sup><a href="#b2">[2]</a></sup>。量子力学では、射影測定による状態の遷移確率は、遷移前後の状態の内積に依存して決まるため、この到達可能関係は、測定による状態の遷移可能性と同義です。しかし、通常の射影測定では、測定したいオブザーバブル（物理量）に基づいて、可能な遷移先がさらに限定されるため、単なる非直交関係では、射影測定の全ての特徴をKripke意味論として定式化しきれていません。</p>
+    <p>そこで、私は、射影測定をより正確に取り込んだ様相論理として、オブザーバブル依存論理を提案しました<sup><a href="#b3">[3]</a></sup>。オブザーバブル依存論理は、従来の埋め込み先である様相論理体系Bとは異なって、様相演算子&#9633;と&#9671;が、それぞれ「確率1」と「確率0より大」に正確に対応します。従って、「確率1」を真、「確率0」を偽、それ以外の確率を第三の真理値に対応させることで、三値量子論理をオブザーバブル依存論理に埋め込むことができます。また、射影測定の冪等性は、公理&#9633;(&#9671;A&#8594;A)によって特徴づけられることを示しました。
+</div>
+<b>参考文献</b>
+<ol class="list-bib">
+    <li id="b1">G. Birkhoff and J. von Neumann. The logic of quantum mechanics. Annals of mathematics, 37(4):823–843, 1936.</li>
+    <li id="b2">R. I. Goldblatt. Semantic analysis of orthologic. Journal of Philosophical Logic, 3:19–35, 1974.</li>
+    <li id="b3">T. Takagi. Translation from Three-Valued Quantum Logic to Modal Logic. International Journal of Theoretical Physics, 60(1):366–377, 2021.</li>
+</ol>
+<h3 class="sub-headline">数理論理による量子計算の形式化と検証</h3>
+    <p>進行中</p>
+<h2 class="headline" id="H3">主な業績</h2>
+<h3 class="sub-headline">査読付き研究論文</h3>
+<ol>
+    <li><b>Tsubasa Takagi</b>. Translation from Three-Valued Quantum Logic to Modal Logic. (International Journal of Theoretical Physics, 60(1):366–377, Springer, 2021) <a href="https://rdcu.be/cdkQL">[PDF]</a></li>
+</ol>
+<h3 class="sub-headline">査読付き国際会議</h3>
+<ol>
+    <li><b>Tsubasa Takagi</b> and Satoshi Tojo. Temporal Observable-Dependent Logic for Quantum finite Automata, <a href="https://qpl2021.eu/">Quantum Physics and Logic 2021</a>.</li>
+</ol>
+<h3 class="sub-headline">研究発表（査読なし）</h3>
+<ol>
+    <li><b>高木翼</b>, A Multi-modal Logic for Quantum Finite Automata, (<a href="https://sites.google.com/view/slacs2020/home">第37回 記号論理と情報科学研究集会 (SLACS2020)</a>)、2020年</li>
+    <li><b>高木翼</b>、「量子論理の視点に基づく反事実的条件法の再考」（<a href="http://phsc.jp/dat/prg/2020.pdf">科学基礎論学会 総会</a>、2020年）</li>
+    <li>保科宏樹、飯澤正登実、齋藤曉、<b>高木翼</b>、「生成消滅演算子にもとづく量子論理」（<a href="https://w4.gakkai-web.net/jps_search/2020sp/data/html/program11.html#j16aK35">日本物理学会 第75回年次大会</a>、2020年）</li>
+    <li><b>高木翼</b>、「近傍意味論の線形代数的再定式化」（<a href="https://sites.google.com/view/mlg2019/program?authuser=0">第54回 MLG数理論理学研究集会</a>、2019年）</li>
+</ol>
+<h3 class="sub-headline">奨学金</h3>
+<ol>
+    <li>SDプログラム奨学金（JAIST、2020年4月～現在）</li>
+    <li>成績最優秀者奨学金（法政大学、2019年4月～2020年3月）</li>
+</ol>
+</main>
+<footer>
+&copy; 2021 Tsubasa Takagi
+</footer>
+</body>
+</html>
