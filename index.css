@@ -197,11 +197,43 @@ table.profile td{
     padding-left: 35px;
 }
 
+.info {
+    margin: 10px 0;
+    padding: 0 1em;
+    border: 1px solid;
+    text-align: left;
+    border-color: #ccc;
+    overflow: auto;
+    height: 10em;
+    background: #F3F4F5;
+}
+.info dt {
+    padding: 0 10px 0 0;
+    width: 7em;
+    font-weight: bold;
+}
+.info dl {
+    padding: 0.5em 0;
+    border-bottom: 1px solid #ccc;
+    margin: 5px 0;
+}
+@media screen and (min-width: 480px) {
+.info dt {
+    clear: left;
+    float: left;
+    }
+.info dd {
+    margin-left: 0.5em;
+    }
+}
+
 .box{
     border: 1px solid #ccc;
     margin: 15px 0;
+    background: #F3F4F5;
 }
 .box-title{
+    border-bottom: 1px solid #ccc;
     padding: 5px 10px;
     font-size: 18px;
     font-weight: bold; 
