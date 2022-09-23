@@ -1,0 +1,86 @@
+html{
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+}
+
+body{
+    margin: 0;
+    font-size: 16px;
+    background: #696969;
+    word-wrap : break-word;
+    overflow-wrap : break-word;
+}
+
+main{
+    margin: 0 30px;
+    padding: 10px 20px;
+    background: #fff;
+}
+@media screen and (max-width:650px){
+main{
+    margin: 0 10px;
+    padding: 10px;
+}
+}
+
+a{
+    color: #FF0000;
+    text-decoration: none;
+}
+
+h1{
+    margin: 20px 30px 15px 30px;
+    padding: 0 10px;
+    text-align: left;
+    color: #fff;
+    letter-spacing: 2px;
+	text-align: center;
+    font-size: 24px;
+}
+
+.headline{
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-card{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.profile-card_inner{
+    position: relative;
+}
+.profile-thumb{
+    overflow: hidden;
+    width: 110px;
+    height: 110px;
+    border: #fff 3px solid;
+    border-radius: 60px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #fff;
+}
+.profile-thumb img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.profile-content{
+    padding: 15px;
+}
+.profile-content span{
+    display: block;
+    text-align: center;
+}
+.profile-name{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+p {
+    padding: 0 10px;
+}
